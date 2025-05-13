@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error
 
 diabetes = datasets.load_diabetes()
 
-diabetes_X = diabetes.data #[:  , 2:3]
+diabetes_X = diabetes.data[:  , 2:3]
 
 diabetes_X_train = diabetes_X[:-30]  ##taking all values excepts last 30 of diabetes_X
 diabetes_X_test = diabetes_X[-30: ]  ##taking last 30 values of diabetes_X
@@ -24,6 +24,6 @@ print("Weights: ", model.coef_ )
 print("Intercept: ", model.intercept_ )
 
 
-# plt.scatter(diabetes_X_test, diabetes_Y_test)
-# plt.plot(diabetes_X_test, diabetes_Y_predicted)
-# plt.show()
+plt.scatter(diabetes_X_test, diabetes_Y_test)
+plt.plot(diabetes_X_test, diabetes_Y_predicted)
+plt.show()
